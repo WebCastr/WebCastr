@@ -5,6 +5,8 @@
 > [!WARNING]
 > WebCaster development is still in the early stages, it is not yet usable as is ! 😅
 
+**Made with ❤️ by [Guillaume Masquelier](https://github.com/gmasquelier59), french developer from <b>Lille, <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" width="13"/> France</b>**
+
 ## Technologies
 
 <p>
