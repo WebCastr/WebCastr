@@ -39,6 +39,10 @@ My goal is for WebCaster to be Windows & Linux compatible ✌️
 
 🚧 **TODO**
 
+### Swagger
+
+In development environment, the API documentation is available at https://localhost:5000/ (or http://localhost:4000/ without HTTPS).
+
 ## License
 
 WebCaster is licensed under the [GNU General Public License (GPL) version 3.0](https://github.com/gmasquelier59/WebCaster/blob/main/LICENSE). This project is free and open-source software, and pull requests are always welcome.
