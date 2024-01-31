@@ -3,6 +3,8 @@
 appsettings*.json
 !appsettings-template.json
 
+**/Database/webcaster.db
+
 WebCaster.FFMPEG/
 WebCaster.Liquidsoap/
 WebCaster.ReplayGain/
