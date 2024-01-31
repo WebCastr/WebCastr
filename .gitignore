@@ -3,6 +3,10 @@
 appsettings*.json
 !appsettings-template.json
 
+WebCaster.FFMPEG/
+WebCaster.Liquidsoap/
+WebCaster.ReplayGain/
+
 # End of WebCaster
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio
