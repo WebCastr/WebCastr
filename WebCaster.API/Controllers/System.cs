@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace WebCaster.API.Controllers
 {
@@ -8,9 +7,9 @@ namespace WebCaster.API.Controllers
     public class System : ControllerBase
     {
         [HttpGet("ping")]
-        public DateTime Ping()
+        public ActionResult<DateTime> Ping()
         {
-            return DateTime.Now.ToUniversalTime();
+            return Ok(DateTime.Now.ToUniversalTime());
         }
     }
 }
