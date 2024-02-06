@@ -8,6 +8,7 @@ appsettings*.json
 WebCaster.FFMPEG/
 WebCaster.Liquidsoap/
 WebCaster.ReplayGain/
+WebCaster.Stations/
 
 # End of WebCaster
 

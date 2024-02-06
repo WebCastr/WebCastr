@@ -3,11 +3,15 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using WebCaster.API.Authentication;
+using WebCaster.API.Models;
 
 namespace WebCaster.API.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
 {
+    public DbSet<Station> Stations { get; set; }
+    public DbSet<MountPoint> Mountpoints { get; set; }
+
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
 
@@ -20,7 +24,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
 
         builder.Entity<ApplicationUser>(entity =>
         {
-            entity.ToTable(name: "User");
+            entity.ToTable(name: "user");
             entity.Ignore(e => e.PhoneNumber);
             entity.Ignore(e => e.PhoneNumberConfirmed);
             entity.Ignore(e => e.TwoFactorEnabled);
@@ -28,22 +32,22 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
 
         builder.Entity<IdentityRole<int>>(entity =>
         {
-            entity.ToTable(name: "Role");
+            entity.ToTable(name: "role");
         });
 
         builder.Entity<IdentityUserClaim<int>>(entity =>
         {
-            entity.ToTable("UserClaim");
+            entity.ToTable("user_claim");
         });
 
         builder.Entity<IdentityUserLogin<int>>(entity =>
         {
-            entity.ToTable("UserLogin");
+            entity.ToTable("user_login");
         });
 
         builder.Entity<IdentityRoleClaim<int>>(entity =>
         {
-            entity.ToTable("RoleClaim");
+            entity.ToTable("role_claim");
         });
 
         builder.Entity<IdentityUserRole<int>>(entity =>
@@ -53,7 +57,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
 
         builder.Entity<IdentityUserToken<int>>(entity =>
         {
-            entity.ToTable("UserToken");
+            entity.ToTable("user_token");
         });
     }
 }
