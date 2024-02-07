@@ -1,9 +1,9 @@
-![](https://github.com/gmasquelier59/WebCaster/raw/main/resources/logo.png)
+![](https://github.com/gmasquelier59/WebCastr/raw/main/resources/logo.png)
 
-# WebCaster: Web Radio Management System
+# WebCastr: Web Radio Management System
 
 > [!WARNING]
-> WebCaster development is still in the early stages, it is not yet usable as is ! 😅
+> WebCastr development is still in the early stages, it is not yet usable as is ! 😅
 
 **Made with ❤️ by [Guillaume Masquelier](https://github.com/gmasquelier59), french developer from <b>Lille, <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" width="13"/> France</b>**
 
@@ -24,14 +24,14 @@
 
 ## Compatibility
 
-My goal is for WebCaster to be Windows & Linux compatible ✌️
+My goal is for WebCastr to be Windows & Linux compatible ✌️
 
 <p>
     <img alt=".Net" src="https://img.shields.io/badge/-Windows 10/11-006d77?style=flat-square&logo=Windows&logoColor=white" />
     <img alt="Entity Framework Core" src="https://img.shields.io/badge/-Linux%20Ubuntu-006d77?style=flat-square&logo=linux&logoColor=white" />
 </p>
 
-## Install WebCaster
+## Install WebCastr
 
 🚧 **TODO**
 
@@ -45,4 +45,4 @@ In development environment, the API documentation is available at https://localh
 
 ## License
 
-WebCaster is licensed under the [GNU General Public License (GPL) version 3.0](https://github.com/gmasquelier59/WebCaster/blob/main/LICENSE). This project is free and open-source software, and pull requests are always welcome.
+WebCastr is licensed under the [GNU General Public License (GPL) version 3.0](https://github.com/gmasquelier59/WebCastr/blob/main/LICENSE). This project is free and open-source software, and pull requests are always welcome.

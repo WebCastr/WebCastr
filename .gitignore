@@ -1,16 +1,16 @@
-### WebCaster ###
+### WebCastr ###
 
 appsettings*.json
 !appsettings-template.json
 
 **/Database/webcaster.db
 
-WebCaster.FFMPEG/
-WebCaster.Liquidsoap/
-WebCaster.ReplayGain/
-WebCaster.Stations/
+WebCastr.FFMPEG/
+WebCastr.Liquidsoap/
+WebCastr.ReplayGain/
+WebCastr.Stations/
 
-# End of WebCaster
+# End of WebCastr
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio
