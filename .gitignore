@@ -5,11 +5,6 @@ appsettings*.json
 
 **/Database/webcaster.db
 
-WebCastr.FFMPEG/
-WebCastr.Liquidsoap/
-WebCastr.ReplayGain/
-WebCastr.Stations/
-
 # End of WebCastr
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio
