@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using WebCastr.API.Services.Liquidsoap.Enums;
 
-namespace WebCastr.API.Models;
+namespace WebCastr.API.DTO;
 
 public class StationCreateDTO
 {

@@ -1,6 +1,6 @@
 ﻿using WebCastr.API.Services.Liquidsoap.Enums;
 
-namespace WebCastr.API.Models;
+namespace WebCastr.API.DTO;
 
 public class StationGetDTO
 {

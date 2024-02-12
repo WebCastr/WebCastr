@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Slugify;
+using WebCastr.API.DTO;
 using WebCastr.API.Models;
 using WebCastr.API.Repositories;
 

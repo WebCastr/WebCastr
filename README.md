@@ -35,6 +35,15 @@ My goal is for WebCastr to be Windows & Linux compatible ✌️
 
 🚧 **TODO**
 
+### Default admin account
+
+| Login | Password |
+|:---:|---|
+| ``admin@webcastr.info`` | ``81WebcastrAdmin!`` |
+
+> [!DANGER]
+> Don't forget to change the default password !
+
 ## Documentation
 
 🚧 **TODO**

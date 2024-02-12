@@ -10,7 +10,7 @@ namespace WebCastr.API.Repositories
     {
         #region ATTRIBUTES
 
-        private readonly ApplicationDbContext _db;
+        private readonly AppDbContext _db;
         private readonly DbSet<Station> _stations;
         private bool disposed = false;
 
@@ -18,7 +18,7 @@ namespace WebCastr.API.Repositories
 
         #region CONSTRUCTORS
 
-        public StationsRepository(ApplicationDbContext db)
+        public StationsRepository(AppDbContext db)
         {
             _db = db;
             _stations = _db.Set<Station>();

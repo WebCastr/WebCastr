@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
+using WebCastr.API.DTO;
 using WebCastr.API.Models;
 using WebCastr.API.Services;
 

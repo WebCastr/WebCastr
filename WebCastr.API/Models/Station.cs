@@ -5,6 +5,10 @@ using WebCastr.API.Services.Liquidsoap.Enums;
 
 namespace WebCastr.API.Models;
 
+// ===================================
+// Don't forget to update related DTOs
+// ===================================
+
 [Table(name: "station"), Index(nameof(ShortName), IsUnique = true), Index(nameof(Guid), IsUnique = true)]
 public class Station
 {

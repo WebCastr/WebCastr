@@ -6,6 +6,10 @@ using WebCastr.API.Enums;
 
 namespace WebCastr.API.Models;
 
+// ===================================
+// Don't forget to update related DTOs
+// ===================================
+
 [Table(name: "mount_point")]
 public class MountPoint
 {
