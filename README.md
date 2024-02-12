@@ -7,7 +7,7 @@ WebCastr will be a solution that provides the necessary tools for easily setting
 It will be based on Liquidsoap and Icecast for playlist and broadcast management.
 An API will be provided as well as a web user interface, all based on ASP.Net Core.
 
-**Made with ❤️ by [Guillaume Masquelier](https://github.com/gmasquelier59), french developer from <b>Lille, <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" width="13"/> France</b>**
+🙋‍♂️ **Made with ❤️ by [Guillaume Masquelier](https://github.com/gmasquelier59), french developer from <b>Lille, <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" width="13"/> France</b>**. In addition to being personally useful, this project allows me to practice on .Net Core, C#, Docker, Liquidsoap & Icecast 😍
 
 > [!WARNING]
 > WebCastr development is still in the early stages, it is not yet usable as is ! 😅
