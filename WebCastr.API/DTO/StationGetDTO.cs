@@ -1,6 +1,4 @@
-﻿using WebCastr.API.Services.Liquidsoap.Enums;
-
-namespace WebCastr.API.Models;
+﻿namespace WebCastr.API.DTO;
 
 public class StationGetDTO
 {
@@ -11,5 +9,4 @@ public class StationGetDTO
     public string? Description { get; set; }
     public bool Enabled { get; set; } = false;
     public string TimeZone { get; set; } = "UTC";
-    public AudioProcessingMethods AudioProcessingMethod { get; set; }
 }

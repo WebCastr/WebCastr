@@ -1,24 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using WebCastr.API.Services.Liquidsoap.Enums;
 
-namespace WebCastr.API.Models;
+namespace WebCastr.Core.Models;
 
-[Table(name: "station"), Index(nameof(ShortName), IsUnique = true), Index(nameof(Guid), IsUnique = true)]
+// ===================================
+// Don't forget to update related DTOs
+// ===================================
+
+[Table(name: "station"), Index(nameof(ShortName), IsUnique = true)]
 public class Station
 {
     /// <summary>
     /// Identifier of the station
     /// </summary>
-    [Column(name: "id")]
-    public int Id { get; set; }
-
-    /// <summary>
-    /// GUID of the station
-    /// </summary>
     [Required, Column(name: "guid", TypeName = "GUID")]
-    public Guid Guid { get; set; } = Guid.NewGuid();
+    public Guid Id { get; set; } = Guid.NewGuid();
 
     /// <summary>
     /// Display name of the station
@@ -58,13 +55,4 @@ public class Station
     /// </summary>
     [NotMapped]
     public string BaseDir { get => ShortName + Path.DirectorySeparatorChar; }
-
-    [Required, Column(name: "audio_processing_method")]
-    public AudioProcessingMethods AudioProcessingMethod { get; set; }
-
-    /// <summary>
-    /// Mount points of the station
-    /// </summary>
-    [Column(name: "mount_points")]
-    public List<MountPoint> MountPoints { get; set; } = new List<MountPoint>();
 }

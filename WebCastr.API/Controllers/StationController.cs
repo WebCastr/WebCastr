@@ -1,40 +1,68 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
-using WebCastr.API.Models;
-using WebCastr.API.Services;
+using WebCastr.API.DTO;
+using WebCastr.Core.Models;
 
 namespace WebCastr.API.Controllers
 {
     [ApiController]
-    [Route("api/station")]
+    [Route("/station")]
     [Tags("Stations")]
     public class StationController : ControllerBase
     {
-        private readonly StationService _service;
-
-        public StationController(StationService service)
-        {
-            _service = service;
-        }
-
-        // POST /api/station
+        /// <summary>
+        /// [NIY] Create a new radio station
+        /// </summary>
+        // POST /station
         [HttpPost]
-        public IActionResult Create(StationCreateDTO stationDTO)
+        public async Task<ActionResult> CreateAsync([FromBody] StationCreateDTO station)
         {
-            StationGetDTO stationGetDTO = _service.Create(stationDTO);
-
-            return Ok(stationGetDTO);
-
-            //return CreatedAtAction
+            throw new NotImplementedException();
         }
 
-        // GET /api/stations
+        /// <summary>
+        /// [NIY] Returns a list of stations
+        /// </summary>
+        // GET /stations
         [HttpGet]
-        [Route("/api/stations")]
-        public ActionResult<List<Station>> GetAll()
+        [Route("/stations")]
+        public async Task<ActionResult<List<Station>>> GetAllAsync()
         {
-            return _service.GetAll();
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// [NIY] Returns informations about a station
+        /// </summary>
+        // GET /station/{id}
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<Station>> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// [NIY] Update informations about a station
+        /// </summary>
+        // PUT /station/{id}
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ActionResult<Station>> UpdateById(int id, [FromBody] StationUpdateDTO station)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// [NIY] Permanently delete a station
+        /// </summary>
+        // DELETE /station/{id}
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ActionResult<Station>> DeleteByIdAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
