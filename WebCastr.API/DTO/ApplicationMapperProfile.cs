@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using WebCastr.API.Models;
+using WebCastr.Core.Models;
 
 namespace WebCastr.API.DTO
 {

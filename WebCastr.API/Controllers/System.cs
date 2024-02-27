@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebCastr.API.Controllers;
 
-[Route("api/system")]
+[Route("/system")]
 [Tags("System")]
 [ApiController]
 public class System : ControllerBase
 {
-    // GET /api/system/ping
+    /// <summary>
+    /// Get a simple status response about the state of WebCastr
+    /// </summary>
+    /// <returns>The current UTC date and time on the server</returns>
+    // GET /system/ping
     [HttpGet("ping"), AllowAnonymous]
     public ActionResult<DateTime> Ping()
     {

@@ -16,16 +16,12 @@ builder.AddDatabase();
 builder.AddControllers();
 builder.AddRepositories();
 builder.AddMapper();
-builder.AddServices();
-builder.AddAuthentication();
 builder.AddSwagger();
 
 var app = builder.Build();
 
-app.AddAuthorization();
 app.AddSwagger();
 app.UseHttpsRedirection();
 app.MapControllers();
-app.StartServices();
 
 app.Run();

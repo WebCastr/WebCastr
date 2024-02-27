@@ -1,6 +1,6 @@
 ﻿namespace WebCastr.API.DTO;
 
-public class StationCreateDTO
+public class MountPointCreateDTO
 {
 
 }
