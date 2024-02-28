@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Serilog;
 using System.Text.Json.Serialization;
-using WebCastr.API.DTO;
+using WebCastr.Core.Requests;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -29,12 +29,6 @@ public static class WebApplicationBuidlerExtension
     public static void AddRepositories(this WebApplicationBuilder builder)
     {
         Log.Information("Adding repositories...");
-    }
-
-    public static void AddMapper(this WebApplicationBuilder builder)
-    {
-        Log.Information("Adding automapper...");
-        builder.Services.AddAutoMapper(typeof(ApplicationMapperProfile));
     }
 
     public static void AddDatabase(this WebApplicationBuilder builder)
