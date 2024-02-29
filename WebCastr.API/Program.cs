@@ -15,7 +15,6 @@ Log.Information($"Thank you for using WebCastr :-)");
 builder.AddDatabase();
 builder.AddControllers();
 builder.AddRepositories();
-builder.AddMapper();
 builder.AddSwagger();
 
 var app = builder.Build();

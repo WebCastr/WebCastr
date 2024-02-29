@@ -1,20 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebCastr.API.DTO;
+using WebCastr.Core.Requests;
 using WebCastr.Core.Models;
+using WebCastr.Core.Responses;
 
 namespace WebCastr.API.Controllers
 {
     [ApiController]
-    [Route("/station/{stationId}/playlist")]
     [Tags("Playlists")]
     public class PlaylistController : ControllerBase
     {
         /// <summary>
         /// [NIY] Create a new playlist
         /// </summary>
-        // POST /station/{stationId}/playlist
-        [HttpPost]
-        public async Task<ActionResult> CreateAsync(int stationId, [FromBody] PlaylistCreateDTO station)
+        [HttpPost("/station/{stationId:guid}/playlist")]
+        public async Task<ActionResult<PlaylistResponse>> CreateAsync(Guid stationId, [FromBody] PlaylistCreateRequest station)
         {
             throw new NotImplementedException();
         }
@@ -22,10 +21,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Returns a list of playlists
         /// </summary>
-        // GET /station/{stationId}/playlists
-        [HttpGet]
-        [Route("/station/{stationId}/playlists")]
-        public async Task<ActionResult<List<Playlist>>> GetAllAsync(int stationId)
+        [HttpGet("/station/{stationId:guid}/playlists")]
+        public async Task<ActionResult<List<PlaylistResponse>>> GetAllAsync(Guid stationId)
         {
             throw new NotImplementedException();
         }
@@ -33,10 +30,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Returns informations about a playlist
         /// </summary>
-        // GET /station/{stationId}/playlist/{id}
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<ActionResult<Playlist>> GetByIdAsync(int stationId, int id)
+        [HttpGet("/station/{stationId}/playlist/{id}")]
+        public async Task<ActionResult<PlaylistResponse>> GetByIdAsync(Guid stationId, Guid id)
         {
             throw new NotImplementedException();
         }
@@ -44,10 +39,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Returns a list of tracks
         /// </summary>
-        // GET /station/{stationId}/playlist/{id}/tracks
-        [HttpGet]
-        [Route("{id}/tracks")]
-        public async Task<ActionResult<List<Track>>> GetTracksAsync(int stationId, int id)
+        [HttpGet("/station/{stationId:guid}/playlist/{id:guid}/tracks")]
+        public async Task<ActionResult<List<TrackResponse>>> GetTracksAsync(Guid stationId, Guid id)
         {
             throw new NotImplementedException();
         }
@@ -55,10 +48,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Update informations about a playlist
         /// </summary>
-        // PUT /station/{stationId}/playlist/{id}
-        [HttpPut]
-        [Route("{id}")]
-        public async Task<ActionResult<Station>> UpdateById(int stationId, int id, [FromBody] StationUpdateDTO station)
+        [HttpPut("/station/{stationId:guid}/playlist/{id:guid}")]
+        public async Task<ActionResult<PlaylistResponse>> UpdateById(Guid stationId, Guid id, [FromBody] StationUpdateRequest station)
         {
             throw new NotImplementedException();
         }
@@ -66,10 +57,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Permanently delete a playlist
         /// </summary>
-        // DELETE /station/{stationId}/playlist/{id}
-        [HttpDelete]
-        [Route("{id}")]
-        public async Task<ActionResult<Station>> DeleteByIdAsync(int stationId, int id)
+        [HttpDelete("/station/{stationId:guid}/playlist/{id:guid}")]
+        public async Task<ActionResult> DeleteByIdAsync(Guid stationId, Guid id)
         {
             throw new NotImplementedException();
         }

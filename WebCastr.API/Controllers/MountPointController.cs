@@ -1,20 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebCastr.API.DTO;
+using WebCastr.Core.Requests;
 using WebCastr.Core.Models;
+using WebCastr.Core.Responses;
 
 namespace WebCastr.API.Controllers
 {
     [ApiController]
-    [Route("/station/{stationId}/mount")]
     [Tags("Mount Points")]
     public class MountPointController : ControllerBase
     {
         /// <summary>
         /// [NIY] Create a new mount point
         /// </summary>
-        // POST /station/{stationId}/mount
-        [HttpPost]
-        public async Task<ActionResult> CreateAsync(int stationId, [FromBody] MountPointCreateDTO mount)
+        [HttpPost("/station/{stationId:guid}/mount")]
+        public async Task<ActionResult<MountPointResponse>> CreateAsync(Guid stationId, [FromBody] MountPointCreateRequest mount)
         {
             throw new NotImplementedException();
         }
@@ -22,10 +21,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Returns a list of mount points
         /// </summary>
-        // GET /station/{stationId}/mounts
-        [HttpGet]
-        [Route("/station/{stationId}/mounts")]
-        public async Task<ActionResult<List<MountPoint>>> GetAllAsync(int stationId)
+        [HttpGet("/station/{stationId:guid}/mounts")]
+        public async Task<ActionResult<List<MountPointResponse>>> GetAllAsync(Guid stationId)
         {
             throw new NotImplementedException();
         }
@@ -33,10 +30,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Returns informations about a mount point
         /// </summary>
-        // GET /station/{stationId}/mount/{id}
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<ActionResult<MountPoint>> GetByIdAsync(int stationId, int id)
+        [HttpGet("/station/{stationId:guid}/mount/{id:guid}")]
+        public async Task<ActionResult<MountPointResponse>> GetByIdAsync(Guid stationId, Guid id)
         {
             throw new NotImplementedException();
         }
@@ -44,10 +39,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Update informations about a mount point
         /// </summary>
-        // PUT /station/{stationId}/mount/{id}
-        [HttpPut]
-        [Route("{id}")]
-        public async Task<ActionResult<MountPoint>> UpdateById(int stationId, int id, [FromBody] MountPointUpdateDTO mount)
+        [HttpPut("/station/{stationId}/mount/{id}")]
+        public async Task<ActionResult<MountPointResponse>> UpdateById(Guid stationId, Guid id, [FromBody] MountPointUpdateRequest mount)
         {
             throw new NotImplementedException();
         }
@@ -55,10 +48,8 @@ namespace WebCastr.API.Controllers
         /// <summary>
         /// [NIY] Permanently delete a mount point
         /// </summary>
-        // DELETE /station/{stationId}/mount/{id}
-        [HttpDelete]
-        [Route("{id}")]
-        public async Task<ActionResult<MountPoint>> DeleteByIdAsync(int stationId, int id)
+        [HttpDelete("/station/{stationId:guid}/mount/{id:guid}")]
+        public async Task<ActionResult> DeleteByIdAsync(Guid stationId, Guid id)
         {
             throw new NotImplementedException();
         }
